@@ -18,7 +18,29 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            transform.Translate(Vector3.up * _speed * Time.deltaTime);
+            Debug.Log("Up Arrow has been pressed");
+        }
+
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            transform.Translate(-Vector3.up * _speed * Time.deltaTime);
+            Debug.Log("Down Arrow has been pressed");
+        }
+
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            transform.Translate(Vector3.right * _speed * Time.deltaTime);
+            Debug.Log("Right Arrow has been pressed");
+        }
+
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            transform.Translate(-Vector3.right * _speed * Time.deltaTime);
+            Debug.Log("Left Arrow has been pressed");
+        }
     }
 
     public void PlantSeed ()
