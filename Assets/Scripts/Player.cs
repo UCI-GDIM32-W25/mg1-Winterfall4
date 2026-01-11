@@ -13,7 +13,8 @@ public class Player : MonoBehaviour
 
     private void Start ()
     {
-        
+        _numSeedsLeft = 5;
+        _numSeedsPlanted = 0;
     }
 
     private void Update()
@@ -44,18 +45,21 @@ public class Player : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(_plantPrefab, _playerTransform.position, _playerTransform.rotation);
-            Debug.Log("Space Bar has been pressed");
-            Debug.Log(_playerTransform.position);
+            PlantSeed();
         }
     }
 
     public void PlantSeed ()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (_numSeedsPlanted < 5)
         {
             Instantiate(_plantPrefab, _playerTransform.position, _playerTransform.rotation);
+            _numSeedsPlanted++;
+            _numSeedsLeft--;
             Debug.Log("Space Bar has been pressed");
+            Debug.Log(_numSeedsLeft);
+            Debug.Log(_numSeedsPlanted);
         }
+        
     }
 }
