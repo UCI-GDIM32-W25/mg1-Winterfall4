@@ -41,10 +41,21 @@ public class Player : MonoBehaviour
             transform.Translate(-Vector3.right * _speed * Time.deltaTime);
             Debug.Log("Left Arrow has been pressed");
         }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate(_plantPrefab, _playerTransform.position, _playerTransform.rotation);
+            Debug.Log("Space Bar has been pressed");
+            Debug.Log(_playerTransform.position);
+        }
     }
 
     public void PlantSeed ()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate(_plantPrefab, _playerTransform.position, _playerTransform.rotation);
+            Debug.Log("Space Bar has been pressed");
+        }
     }
 }

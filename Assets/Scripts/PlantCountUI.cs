@@ -8,6 +8,18 @@ public class PlantCountUI : MonoBehaviour
 
     public void UpdateSeeds (int seedsLeft, int seedsPlanted)
     {
-        
+        seedsLeft = 5;
+        seedsPlanted = 5;
+        if (Input.GetKey(KeyCode.Space))
+        {
+            _plantedText.text = seedsLeft.ToString();
+            Debug.Log("Space Bar 2");
+        }
+   
     }
+    private void Update()
+    {
+    
+    }
+
 }
