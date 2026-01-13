@@ -23,23 +23,7 @@ public class PlantCountUI : MonoBehaviour
         {
             seedsLeft--;
             seedsPlanted++;
-            Debug.Log("Space Bar 2");
         }
     }
     
-
-    /* public void UpdateSeeds (int seedsLeft, int seedsPlanted)
-    {
-        seedsLeft = 5;
-        seedsPlanted = 0;
-        if (Input.GetKey(KeyCode.Space))
-        {
-            seedsLeft--;
-            seedsPlanted++;
-            _plantedText.text = seedsLeft.ToString();
-            Debug.Log("Space Bar 2");
-        }
-   
-    }*/
-
 }

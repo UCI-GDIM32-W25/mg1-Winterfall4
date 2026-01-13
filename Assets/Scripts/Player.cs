@@ -22,25 +22,21 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.UpArrow))
         {
             transform.Translate(Vector3.up * _speed * Time.deltaTime);
-            Debug.Log("Up Arrow has been pressed");
         }
 
         if (Input.GetKey(KeyCode.DownArrow))
         {
             transform.Translate(-Vector3.up * _speed * Time.deltaTime);
-            Debug.Log("Down Arrow has been pressed");
         }
 
         if (Input.GetKey(KeyCode.RightArrow))
         {
             transform.Translate(Vector3.right * _speed * Time.deltaTime);
-            Debug.Log("Right Arrow has been pressed");
         }
 
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             transform.Translate(-Vector3.right * _speed * Time.deltaTime);
-            Debug.Log("Left Arrow has been pressed");
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
@@ -56,9 +52,6 @@ public class Player : MonoBehaviour
             Instantiate(_plantPrefab, _playerTransform.position, _playerTransform.rotation);
             _numSeedsPlanted++;
             _numSeedsLeft--;
-            Debug.Log("Space Bar has been pressed");
-            Debug.Log(_numSeedsLeft);
-            Debug.Log(_numSeedsPlanted);
         }
         
     }
